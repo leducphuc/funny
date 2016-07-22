@@ -1,0 +1,9 @@
+<%= form_for [:admin, @category] do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit (f.object.new_record? ? t("create") : t("edit")) %>
+  </div>
+<% end %>
