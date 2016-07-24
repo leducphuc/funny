@@ -1,0 +1,26 @@
+<div class="result-table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Right Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @lesson.results.each do |rs| %>
+      <tr>
+        <%= rs.question.name %>
+      </tr>
+      <tr>
+        <%= rs.answer.name %>
+      </tr>
+      <tr>
+        <% if rs.wrong_answer? %>
+          <%= rs.wrong_aswer %>
+        <% else %>
+          <%= rs.question.name %>
+        <% end %>
+      </tr>
+  </tbody>
+
+</div>
