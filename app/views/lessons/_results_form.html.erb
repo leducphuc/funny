@@ -1,0 +1,7 @@
+<%= f.object.question.name %>
+<% f.object.question.answers.each do |answer| %>
+  <li>
+    <%= f.check_box :answer_id %>
+    <%= answer.name %>
+  </li>
+<% end %>
